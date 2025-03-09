@@ -48,14 +48,14 @@ export default function Home() {
           </Box>
         </section>
         
-        {/* Experience section - Add your work history in /components/sections/Experience */}
-        <Experience />
+        {/* Experience section - Add your work history in /components/sections/Experience
+        <Experience /> */}
         
         {/* Projects section - Showcase your projects in /components/sections/Projects */}
         <Projects />
         
-        {/* Gallery section - Add your photos in /components/sections/Gallery */}
-        <Gallery />
+        {/* Gallery section - Add your photos in /components/sections/Gallery
+        <Gallery /> */}
       </main>
     </>
   )

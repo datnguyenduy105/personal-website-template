@@ -7,20 +7,37 @@ import {
   PROJECT_DATA
 } from '@/app/data/project'
 
+// // Định nghĩa kiểu dữ liệu ProjectDetail đã loại bỏ company, features và achievements
+// export type ProjectDetail = {
+//   id: number;                // ID duy nhất của dự án
+//   title: string;             // Tiêu đề dự án
+//   overview: string;          // Mô tả tổng quan về dự án
+//   mainImage: string;         // Đường dẫn đến ảnh chính của dự án
+//   link: string;              // URL của dự án đang hoạt động
+//   github?: string;          // (Tùy chọn) URL của kho lưu trữ GitHub
+//   techStack: {             // Các nhóm công nghệ được sử dụng
+//     category: string;       // Tên loại công nghệ
+//     items: string[];        // Danh sách các công nghệ
+//   }[];
+// }
+
+// Hàm này không còn cần thiết vì không sử dụng features nữa, có thể xóa hoặc giữ lại nếu có ý định dùng sau này.
 const preloadImages = (features: { image: string | string[] }[]) => {
-  if (typeof window === 'undefined') return;
+  return; // Không làm gì cả vì không dùng đến
+
+  // if (typeof window === 'undefined') return;
   
-  features.forEach(feature => {
-    if (Array.isArray(feature.image)) {
-      feature.image.forEach(img => {
-        const image = new window.Image();
-        image.src = img;
-      });
-    } else {
-      const image = new window.Image();
-      image.src = feature.image;
-    }
-  });
+  // features.forEach(feature => {
+  //   if (Array.isArray(feature.image)) {
+  //     feature.image.forEach(img => {
+  //       const image = new window.Image();
+  //       image.src = img;
+  //     });
+  //   } else {
+  //     const image = new window.Image();
+  //     image.src = feature.image;
+  //   }
+  // });
 };
 
 export default function ExperienceModal({ 
@@ -32,14 +49,14 @@ export default function ExperienceModal({
   onClose: () => void
   experienceId: number 
 }) {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
+  // const [currentImageIndex, setCurrentImageIndex] = useState(0); // Không cần thiết vì không hiển thị features
+
   const experience = getProjectById(experienceId) || Object.values(PROJECT_DATA)[0];
 
   useEffect(() => {
     if (open) {
       document.body.style.overflow = 'hidden';
-      preloadImages(experience.features);
+      // preloadImages(experience.features); // Không cần thiết vì không dùng features
     } else {
       document.body.style.overflow = 'unset';
     }
@@ -47,13 +64,13 @@ export default function ExperienceModal({
     return () => {
       document.body.style.overflow = 'unset';
     }
-  }, [open, experience.features]);
+  }, [open]); // Loại bỏ experience.features khỏi dependency array
 
-  useEffect(() => {
-    if (!open) {
-      setCurrentImageIndex(0);
-    }
-  }, [open]);
+  // useEffect(() => {
+  //   if (!open) {
+  //     setCurrentImageIndex(0); // Không cần thiết vì không hiển thị features
+  //   }
+  // }, [open]);
 
   if (!open) return null;
 
@@ -122,10 +139,11 @@ export default function ExperienceModal({
 
         <div className="space-y-8">
           <div className="space-y-6">
-            <div className="space-y-2">
-              <p className="text-sm text-gray-500 dark:text-gray-400">
+            {/* <div className="space-y-2"> */}
+              {/* <p className="text-sm text-gray-500 dark:text-gray-400">
                 {experience.company}
-              </p>
+              </p> */}
+            {/* </div> */}
               <div className="flex items-center justify-between gap-4">
                 <h1 className="
                   text-2xl sm:text-3xl md:text-4xl 
@@ -169,7 +187,7 @@ export default function ExperienceModal({
                   )}
                 </div>
               </div>
-            </div>
+
             <p className="
               text-base sm:text-lg 
               leading-relaxed 
@@ -231,111 +249,17 @@ export default function ExperienceModal({
             />
           </a>
 
-          <div className="space-y-8">
-            <h2 className="
-              text-xl sm:text-2xl 
-              font-bold 
-              tracking-tight
-              flex items-center gap-2
-              before:content-[''] before:block before:w-8 before:h-[2px] 
-              before:bg-purple-500/50
-            ">
-              Core Features
-            </h2>
-            <div className="space-y-12">
-              {experience.features.map((feature, index) => (
-                <div 
-                  key={index}
-                  className="
-                    flex flex-col md:flex-row 
-                    gap-8 
-                    items-center
-                    p-4 rounded-xl
-                  "
-                >
-                  <div className="flex-1 space-y-4">
-                    <h3 className="
-                      text-lg sm:text-xl 
-                      font-semibold 
-                      tracking-tight
-                      text-purple-600 dark:text-purple-400
-                    ">
-                      {feature.title}
-                    </h3>
-                    <p className="
-                      text-gray-600 dark:text-gray-300 
-                      leading-relaxed
-                    ">
-                      {feature.description}
-                    </p>
-                  </div>
-                  <div className="
-                    flex-1 
-                    relative w-full
-                  ">
-                    {Array.isArray(feature.image) ? (
-                      <div className="space-y-4">
-                        <div className="
-                          relative w-full h-[200px]
-                          rounded-xl overflow-hidden
-                          shadow-lg
-                        ">
-                          <Image
-                            src={feature.image[currentImageIndex] || feature.image[0]}
-                            alt={feature.title}
-                            fill
-                            className="object-cover"
-                          />
-                        </div>
-                        <div className="flex justify-center gap-2">
-                          {feature.image.map((_, imgIndex) => (
-                            <button
-                              key={imgIndex}
-                              onClick={() => setCurrentImageIndex(imgIndex)}
-                              className={`
-                                w-2 h-2 rounded-full
-                                transition-all duration-300
-                                ${currentImageIndex === imgIndex 
-                                  ? 'bg-purple-600 w-4' 
-                                  : 'bg-gray-300 hover:bg-gray-400'
-                                }
-                              `}
-                              aria-label={`View image ${imgIndex + 1}`}
-                            />
-                          ))}
-                        </div>
-                      </div>
-                    ) : (
-                      <div className="
-                        relative w-full h-[200px]
-                        rounded-xl overflow-hidden
-                        shadow-lg
-                      ">
-                        <Image
-                          src={feature.image}
-                          alt={feature.title}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
           <div className="space-y-8 mb-12">
             <h2 className="
               text-xl sm:text-2xl 
               font-bold 
               tracking-tight
             ">
-              Tech Stack
+              Technical Skills
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {experience.techStack.map((tech, index) => (
+              {experience.technicalSkills.map((tech, index) => (
                 <div 
                   key={index}
                   className="
@@ -406,39 +330,8 @@ export default function ExperienceModal({
             </div>
           </div>
 
-          <div className="space-y-8">
-            <h2 className="
-              text-xl sm:text-2xl 
-              font-bold 
-              tracking-tight
-            ">
-              Quantitative Results
-            </h2>
-            <div className="
-              grid grid-cols-1 sm:grid-cols-3 
-              gap-8
-            ">
-              {experience.achievements.map((achievement, index) => (
-                <div key={index} className="text-center space-y-2">
-                  <p className="
-                    text-3xl sm:text-4xl 
-                    font-bold 
-                    tracking-tight
-                    text-purple-600 dark:text-purple-400
-                  ">
-                    {achievement.value}
-                  </p>
-                  <p className="
-                    text-gray-600 dark:text-gray-300
-                  ">
-                    {achievement.metric}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </div>
   )
-} 
+}

@@ -28,8 +28,7 @@ export default function Hero() {
           className="max-w-2xl text-center sm:text-left"
         >
           <p className="text-foreground/80 leading-relaxed">
-            Write a brief self-introduction here, including your educational background, job objectives, or current work status.
-          </p>
+          A highly motivated Data Science graduate from the University of Science - VNUHCM. Proficient in Python, SQL, and data visualization. Seeking an entry-level opportunity to contribute analytical skills and drive impactful data-driven solutions.          </p>
         </AnimatedText>
 
         <AnimatedText 
@@ -71,7 +70,7 @@ export default function Hero() {
               text-base                              // Fixed font size
               min-w-44                              // Fixed minimum width
             "
-            href="/resume.pdf" // Replace with your resume PDF path in public folder
+            href="/skills/Dat_Nguyen_Resume.pdf" // Replace with your resume PDF path in public folder
             target="_blank"
           >
             <Image
@@ -92,7 +91,7 @@ export default function Hero() {
       >
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="nguyenduydat105@gmail.com" // Replace with your email address
+          href="mailto:nguyenduydat105@gmail.com" // Replace with your email address
         >
           <Image
             aria-hidden

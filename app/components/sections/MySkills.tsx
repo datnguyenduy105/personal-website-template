@@ -12,42 +12,61 @@ import AnimatedText from "../common/AnimatedText"
 // - name: Skill name
 // - icon: Icon path (SVG format, stored in public/skills/ directory)
 const technologies = {
-  // Frontend development skills examples
-  frontend: [
-    { name: 'React', icon: '/skills/react.svg' },
-    { name: 'Vue', icon: '/skills/vue.svg' },     // Add your familiar frontend frameworks
-    { name: 'TypeScript', icon: '/skills/typescript.svg' },
+  //  Programming Languages
+  language: [
+    { name: 'SQL', icon: '/skills/sql.svg' },
+    { name: 'Python', icon: '/skills/python.svg' }, // Add your familiar backend languages
+    { name: 'R', icon: '/skills/r.svg' },     // Add your familiar frontend frameworks
+    { name: 'C/C++', icon: '/skills/c.svg' },
   ],
   
-  // Backend development skills examples
-  backend: [
-    { name: 'Node.js', icon: '/skills/nodejs.svg' },
-    { name: 'Python', icon: '/skills/python.svg' }, // Add your familiar backend languages
-    { name: 'Java', icon: '/skills/java.svg' },
+  //  Explore Data Analysis
+  eda: [
+    { name: 'Numpy', icon: '/skills/numpy.svg' },
+    { name: 'Pandas', icon: '/skills/pandas.svg' }, // Add your familiar backend languages
+    { name: 'Matplotlib', icon: '/skills/matplotlib.svg' },
+    { name: 'Seaborn', icon: '/skills/seaborn.svg' },
+    { name: 'Plotly', icon: '/skills/plotly.svg' },
+    { name: 'PowerBI', icon: '/skills/powerbi.svg' },
+    { name: 'Excel', icon: '/skills/excel.svg' },
+    { name: 'Google Sheet', icon: '/skills/sheet.svg' },
+
   ],
 
-  // Database and deployment examples
-  infrastructure: [
-    { name: 'MySQL', icon: '/skills/mysql.svg' },  // Add databases you've used
+   //  Machine Learning/AI
+   machine: [
+    { name: 'Scikit-learn', icon: '/skills/scikit-learn.svg' },
+    // { name: 'Python', icon: '/skills/python.svg' }, // Add your familiar backend languages
+    // { name: 'Java', icon: '/skills/java.svg' },
+  ],
+
+  // Database  Management Systems
+  database: [
+    { name: 'SQL Server', icon: '/skills/sql.svg' },  // Add databases you've used
     { name: 'MongoDB', icon: '/skills/mongodb.svg' },
-    { name: 'Docker', icon: '/skills/docker.svg' }, // Add deployment tools you're familiar with
+    { name: 'PostgreSQL', icon: '/skills/postgresql.svg' }, // Add deployment tools you're familiar with
+    { name: 'Google BigQuery', icon: '/skills/bigquery.svg' }, // Add deployment tools you're familiar
   ],
 
   // Development tools examples
   tools: [
     { name: 'Git', icon: '/skills/git.svg' },
     { name: 'VS Code', icon: '/skills/vscode.svg' },
-    { name: 'Postman', icon: '/skills/postman.svg' }, // Add your commonly used development tools
+    { name: 'Selenium', icon: '/skills/selenium.svg' }, // Add your commonly used development tools
+    { name: 'Jupyter', icon: '/skills/jupyter.svg' }, // Add your commonly used development tools
+    { name: 'Colab', icon: '/skills/colab.svg' }, // Add your commonly used development tools
+
   ]
 }
 
 // Category display name configuration
 // You can modify category names or add new categories as needed
 const categories = {
-  frontend: 'Frontend Development',
-  backend: 'Backend Development',
-  infrastructure: 'Database & Deployment',
-  tools: 'Development Tools'
+  language: 'Programming Languages',
+  eda: 'Explore Data Analysis',
+  database: 'Database Management Systems',
+  machine: 'Machine Learning/AI',
+  tools: 'Tools'
 }
 
 // Usage instructions:

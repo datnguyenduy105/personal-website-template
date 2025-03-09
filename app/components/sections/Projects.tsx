@@ -34,22 +34,40 @@ type Project = {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Example Project 1",
-    description: "This is a sample project description. Detail the main features, technical architecture, your responsibilities and project highlights. Use concise language to emphasize key points.",
-    period: "2024.01 - 2024.03",
-    image: "/example1/screenshot.png", // Screenshot path
-    skills: ["React", "TypeScript", "Node.js"], // Tech stack
-    link: "https://github.com/username/project1"
+    title: "Ecommerce Customer Churn Analysis ",
+    description: " Conducted data analysis to identify key drivers of customer churn and developed data-driven insights for targeted retention strategies.",
+    period: "2025.02 - 2025.03",
+    image: "/skills/ecom.png", // Screenshot path
+    skills: ["SQL", "BigQuery", "PowerBI", "Data Cleaning", "Data Transformation", "EDA", "RFM Segmentation"], // Tech stack
+    link: "https://github.com/datnguyenduy105/Ecommerce-Customer-Churn-Analysis"
   },
   {
     id: 2, 
-    title: "Example Project 2",
-    description: "Another example project. Description can include: 1) Problems solved 2) Technical solutions used 3) Results achieved 4) What you learned",
-    period: "2023.10 - 2023.12",
-    image: "/example2/demo.png",
-    skills: ["Vue.js", "Python", "MongoDB"],
-    link: "https://github.com/username/project2"
-  }
+    title: "Football Player Value Prediction Season 24/25",
+    description: " Developed a machine learning model to predict football player market values, enabling identification of valued talent for optimized team recruitment strategies.",
+    period: "2025.01 - 2025.02",
+    image: "/skills/big5.jpg",
+    skills: ["Python","BeautifulSoup","Data Analysis", "Machine Learning"],
+    link: "https://github.com/datnguyenduy105/Football-Player-Value-Prediction-Season-24-25"
+  },
+  {
+    id: 3,
+    title: "Jobs And Salaries In Data Related Careers",
+    description: "Addressed the lack of current salary information across data-related careers by analyzing trends from 2020-2024, enabling data-driven career and recruitment strategies.",
+    period: "2024.12 - 2025.01",
+    image: "/skills/dssalaries.jpg", // Screenshot path
+    skills: ["Python", "Data Cleaning", "EDA", "Data Visualization", "Data Wrangling"], // Tech stack
+    link: "https://github.com/datnguyenduy105/Jobs-And-Salaries-In-Data-Related-Careers-2024"
+  },
+  {
+    id: 4,
+    title: " Global Electronic Retailer Data Analysis",
+    description: " Analyzed global electronic retailer time-series data to optimize revenue and improve operational efficiency.",
+    period: "2024.11 - 2024.12",
+    image: "/skills/retail.jpg", // Screenshot path
+    skills: ["SQL", "PowerBI"], // Tech stack
+    link: "https://github.com/datnguyenduy105/Global-Electronic-Retailer-Sales-POWER-BI-SQL"
+  },
 ];
 
 export default function Projects() {

@@ -14,11 +14,9 @@ export default function About() {
           <AnimatedText>
             <div className="space-y-4">
               <p className="text-lg text-foreground/80 leading-relaxed">
-                Here, you can introduce your basic background information. Include your name, major, education and other basic information. This is an excellent place to showcase your personal characteristics.
-              </p>
+              As a final year Data Science student from the University of Science - VNUHCM, I am a passionate and proficient data analyst and machine learning practitioner with expertise in Python, SQL, and visualization tools like Power BI, dedicated to delivering actionable insights.              </p>
               <p className="text-lg text-foreground/80 leading-relaxed">
-                You can describe your professional skills and experience in detail. Highlight your tech stack, project experience, and achievements in relevant fields. This information will help visitors better understand your professional capabilities.
-              </p>
+              I am always seeking new challenges to apply my knowledge and skills, contributing to data-driven decision-making and driving business growth.              </p>
             </div>
           </AnimatedText>
 
@@ -26,8 +24,7 @@ export default function About() {
             <div className="space-y-4">
               <h2 className="text-2xl font-semibold">Personal Interests</h2>
               <p className="text-lg text-foreground/80 leading-relaxed">
-                In this section, you can share your personal interests and hobbies. This content can make your profile more vibrant and showcase your unique personality traits.
-              </p>
+              Beyond the world of data, I find immense satisfaction in exploring new concepts and approaches, and I'm particularly drawn to opportunities that encourage creativity and innovative problem-solving in my work.              </p>
             </div>
           </AnimatedText>
 
@@ -35,8 +32,10 @@ export default function About() {
             <div className="space-y-4">
               <h2 className="text-2xl font-semibold">Career Goals</h2>
               <p className="text-lg text-foreground/80 leading-relaxed">
-                Here you can describe your career development plans and goals. Clearly express the types of opportunities you are looking for and the goals you hope to achieve in your future career.
-              </p>
+              As an entry-level data enthusiast, I am eager to contribute my analytical skills 
+              to a dynamic team. I am committed to continuous learning and am excited to apply 
+              data-driven insights to real-world challenges. My goal is to grow professionally while
+              making a meaningful impact in the field of data analysis.              </p>
             </div>
           </AnimatedText>
         </div>

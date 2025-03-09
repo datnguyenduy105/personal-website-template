@@ -21,7 +21,7 @@ const courses: CourseItem[] = [
   {
     date: "2018 - 2021",
     title: "Nguyen Trai High School - Khanh Hoa",
-    description: "Keyword1 | Keyword2 | Keyword3"
+    description: "Achieved outstanding student honors for 12 consecutive years."
   }
   // {
   //   date: "Spring 2024", 

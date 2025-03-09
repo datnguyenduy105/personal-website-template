@@ -11,23 +11,23 @@ import { useEffect, useState } from "react"
 
 const items: { text: string, type: 'tech' | 'project' | 'interest' }[] = [
   // Technical Skills - Add or modify your technical expertise
-  { text: "React", type: "tech" },
-  { text: "TypeScript", type: "tech" },
+  { text: "Matplotlib", type: "tech" },
+  { text: "Numpy", type: "tech" },
   { text: "Python", type: "tech" },
-  { text: "Node.js", type: "tech" },
-  { text: "Git", type: "tech" },
+  { text: "SQL", type: "tech" },
+  { text: "Jupyter", type: "tech" },
   
   // Projects - List your key projects or work experience
   { text: "Portfolio", type: "project" },
-  { text: "Web Development", type: "project" },
-  { text: "Animehub", type: "project" },
-  { text: "SDE", type: "project" },
+  { text: "Data Analyst", type: "project" },
+  { text: "Databases", type: "project" },
+  { text: "VNUHCM", type: "project" },
   
   // Interests/Background - Share your interests and background
   { text: "ML/AI", type: "interest" },
-  { text: "Full Stack", type: "interest" },
-  { text: "Computer Science", type: "interest" },
-  { text: "UCSC", type: "interest" },
+  { text: "Data Science", type: "interest" },
+  { text: "NLP", type: "interest" },
+  { text: "Design", type: "interest" },
 ]
 
 interface FloatingItem {
