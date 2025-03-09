@@ -12,15 +12,15 @@ export default function Hero() {
         <AnimatedText className="flex flex-col items-center sm:items-start gap-4">
           <Image
             className="rounded-full"
-            src="/avatar.jpg" // Replace with your avatar image path in public folder
+            src="/ava2.jpg" // Replace with your avatar image path in public folder
             alt="Profile Picture"
             width={120}
             height={120}
             priority
           />
-          <h1 className="text-4xl font-bold">Your Name</h1>
+          <h1 className="text-4xl font-bold">Duy Dat Nguyen</h1>
           <p className="text-lg text-foreground/80 font-[family-name:var(--font-geist-mono)]">
-            Your Job Title
+            Data Analyst 
           </p>
         </AnimatedText>
 
@@ -46,7 +46,7 @@ export default function Hero() {
               px-5                                   // Fixed padding
               text-base                              // Fixed font size
             "
-            href="https://github.com/your-username" // Replace with your GitHub profile link
+            href="https://github.com/datnguyenduy105" // Replace with your GitHub profile link
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -92,7 +92,7 @@ export default function Hero() {
       >
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="mailto:your-email" // Replace with your email address
+          href="nguyenduydat105@gmail.com" // Replace with your email address
         >
           <Image
             aria-hidden
@@ -106,7 +106,7 @@ export default function Hero() {
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://www.linkedin.com/in/your-username" // Replace with your LinkedIn profile link
+          href="https://www.linkedin.com/in/dat-nguyen-lucaz/" // Replace with your LinkedIn profile link
           target="_blank"
           rel="noopener noreferrer"
         >

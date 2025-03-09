@@ -13,30 +13,31 @@ interface CourseItem {
 // Example course data - Replace with your own education experience
 const courses: CourseItem[] = [
   {
-    date: "2023 - Present",
-    title: "Your University Name",
-    description: "Your Major | GPA: X.XX"
+    date: "2021 - Present",
+    title: "University of Science - VNUHCM",
+    description: "Major: Mathematics & Computer Science | Specialization: Data Science"
   },
+
   {
-    date: "Fall 2023",
-    title: "Course Name 1",
-    description: "Keyword1 | Keyword2 | Keyword3"
-  },
-  {
-    date: "Spring 2024", 
-    title: "Course Name 2",
-    description: "Keyword1 | Keyword2 | Keyword3"
-  },
-  {
-    date: "Fall 2024",
-    title: "Course Name 3",
-    description: "Keyword1 | Keyword2 | Keyword3"
-  },
-  {
-    date: "Spring 2025",
-    title: "Course Name 4", 
+    date: "2018 - 2021",
+    title: "Nguyen Trai High School - Khanh Hoa",
     description: "Keyword1 | Keyword2 | Keyword3"
   }
+  // {
+  //   date: "Spring 2024", 
+  //   title: "Course Name 2",
+  //   description: "Keyword1 | Keyword2 | Keyword3"
+  // },
+  // {
+  //   date: "Fall 2024",
+  //   title: "Course Name 3",
+  //   description: "Keyword1 | Keyword2 | Keyword3"
+  // },
+  // {
+  //   date: "Spring 2025",
+  //   title: "Course Name 4", 
+  //   description: "Keyword1 | Keyword2 | Keyword3"
+  // }
 ]
 
 // Usage Instructions:

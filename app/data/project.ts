@@ -27,11 +27,11 @@ export type ProjectDetail = {
 export const PROJECT_DATA: Record<number, ProjectDetail> = {
   1: {
     id: 1,
-    title: "Example Project 1",
+    title: "Global Electronic Retailer Data Analysis",
     company: "Example Company 1", 
-    overview: "Project 1 Overview",
+    overview: "Global Electronic Retailer operates a worldwide company, selling various electronic products to its customers. This project analyzes retailer time-series data, including transaction details, customer demographics, and store performance. By integrating advanced SQL analysis with dynamic Power BI reporting, the project aims to identify growth opportunities, optimize resource allocation, and enhance customer satisfaction.",
     mainImage: "/example1/main.png",
-    link: "https://example1.com",
+    link: "https://github.com/datnguyenduy105/Global-Electronic-Retailer-Sales-POWER-BI-SQL",
     features: [
       {
         title: "Feature 1",
@@ -42,7 +42,7 @@ export const PROJECT_DATA: Record<number, ProjectDetail> = {
     techStack: [
       {
         category: "Frontend",
-        items: ["React", "TypeScript"]
+        items: ["SQL", "PowerBI"]
       }
     ],
     achievements: [
