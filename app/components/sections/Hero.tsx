@@ -70,7 +70,7 @@ export default function Hero() {
               text-base                              // Fixed font size
               min-w-44                              // Fixed minimum width
             "
-            href="/skills/Dat_Nguyen_Resume.pdf" // Replace with your resume PDF path in public folder
+            href="" // Replace with your resume PDF path in public folder
             target="_blank"
           >
             <Image
